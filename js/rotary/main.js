@@ -10,10 +10,6 @@ var conf = {
         {
             id: 'btn',
             src: '../img/rotary/btn.png'
-        },
-        {
-            id: 'pin',
-            src: '../img/rotary/pin.png'
         }
     ],//预加载资源
 };
@@ -48,6 +44,14 @@ $('#start').on('click', function () {
 
 $('#pause').on('click', function () {
     rotary.stop();
+});
+
+$('#end').on('click', function () {
+    var target = _.random(0, 7);
+    console.log(target);
+    rotary.endTo(target, function () {
+        alert('成功');
+    });
 });
 
 $('#reset').on('click', function () {
