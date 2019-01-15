@@ -50,7 +50,7 @@ $('#end').on('click', function () {
     var target = _.random(0, 7);
     console.log(target);
     rotary.endTo(target, function () {
-        alert('成功');
+        console.log('成功');
     });
 });
 
